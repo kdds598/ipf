@@ -238,7 +238,7 @@ const AttendanceDetail = ({ record, onClose }) => {
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "Attendance");
 
-    const fileName = `Attendance_${new Date(record.date)
+    const fileName = `IP_Attendance_${new Date(record.date)
       .toISOString()
       .slice(0, 10)}.xlsx`;
 

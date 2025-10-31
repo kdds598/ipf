@@ -302,7 +302,7 @@ const downloadCSV = () => {
   XLSX.utils.book_append_sheet(workbook, worksheet, 'Attendance');
 
   // Use .xlsx even if named .csv, for better formatting
-  XLSX.writeFile(workbook, `attendance-${selectedDate}.xlsx`);
+  XLSX.writeFile(workbook, `IP_Attendance-${selectedDate}.xlsx`);
 };
 
   // const downloadCSV = () => {

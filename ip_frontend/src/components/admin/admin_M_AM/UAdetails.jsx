@@ -194,7 +194,8 @@ const UserAttendanceDetail = ({ userId, onClose }) => {
       alert("No attendance records to download.");
       return;
     }
-
+    // console.log(userId,user);
+    
     const data = records.map((r) => ({
       Date: new Date(r.date).toISOString().slice(0, 10),
       Slot: r.slot || "—",
@@ -204,7 +205,7 @@ const UserAttendanceDetail = ({ userId, onClose }) => {
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, "Attendance");
 
-    XLSX.writeFile(workbook, `user_attendance_${userId}_${user}_.xlsx`);
+    XLSX.writeFile(workbook, `IP_user_attendance_${userId}_${uname}_.xlsx`);
   };
 
   return (
