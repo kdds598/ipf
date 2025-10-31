@@ -653,14 +653,29 @@ setAddError("");
       <div
   className={`${styles.modalContent} ${
     modalMode === "view"
-      ? styles[selectedUser.membership?.type?.toLowerCase()]
+      ? styles['bgm']
       : ""
   } ${styles["ucard"]}`}
 >
 
     {modalMode === "view" && (
       <>
-        <h3>User Details</h3>
+        <h3 style={{color:"white"}}>User Details</h3>
+           <hr
+              style={{
+                height: "10px",
+                marginTop: "4px",
+                // backgroundColor: "#d8aa00ff",
+                // backgroundColor: "#ea9df7",
+backgroundColor: 
+  selectedUser?.membership?.type === "Silver" ? "#ddddddff" :
+  selectedUser?.membership?.type === "Platinum" ? "#ea9df7" :
+  selectedUser?.membership?.type === "Gold" ? "#d8aa00ff" :
+  selectedUser?.membership?.type === "Bronze" ? "#eb9737ff" :
+  "white",
+                borderRadius: "10px",
+              }}
+            />
         <p><b>Name:</b> {selectedUser.name}</p>
         <p><b>Email:</b> {selectedUser.email}</p>
         <p>
